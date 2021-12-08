@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.5.RELEASE</version>
+    <relativePath /> <!-- lookup parent from repository -->
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>pom</packaging>
+  <groupId>me.loda.spring</groupId>
+  <artifactId>spring-boot-learning</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>spring-boot-learning</name>
+  <description>Everything about Spring Boot</description>
+  <url>https://loda.me/</url>
+
+  <organization>
+    <name>loda.me</name>
+    <url>https://loda.me/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>loda</id>
+      <name>Nguyễn Hoàng Nam</name>
+      <email>loda.namnh@gmail.com</email>
+      <url>https://github.com/loda-kun</url>
+      <organization>loda</organization>
+      <organizationUrl>https://loda.me/</organizationUrl>
+      <roles>
+        <role>founder</role>
+      </roles>
+      <properties>
+        <facebook>https://www.facebook.com/nam.tehee</facebook>
+        <linkedin>https://www.linkedin.com/in/loda-nam-hoang/</linkedin>
+      </properties>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>spring-configuration-properties</module>
+    <module>jpa-hibernate-one-to-one</module>
+    <module>jpa-hibernate-one-to-many</module>
+    <module>jpa-hibernate-many-to-many</module>
+    <module>spring-security-example</module>
+    <module>spring-security-hibernate</module>
+    <module>spring-security-hibernate-jwt</module>
+    <module>spring-redis</module>
+    <module>basic-dependency-loosely-coupled</module>
+    <module>spring-boot-1-helloworld-@Component-@Autowired</module>
+    <module>spring-boot-webflux</module>
+    <module>spring-cloud-config-server</module>
+    <module>spring-cloud-config-client</module>
+    <module>spring-boot-2-helloworld-@Primary - @Qualifier</module>
+    <module>spring-boot-3-bean-life-cycle-@PostConstruct-@PreDestroy</module>
+    <module>spring-boot-4-@Component-@Service-@Repository</module>
+    <module>spring-boot-5-Component-Scan</module>
+    <module>spring-boot-6-@configuration-@Bean</module>
+    <module>spring-boot-7-spring-application-properties-@Value</module>
+    <module>spring-boot-8-@Controller-web-helloworld</module>
+    <module>spring-boot-@Lazy-Anotation</module>
+    <module>spring-boot-9-thymeleaf</module>
+    <module>spring-boot-10-@PostMapping-@RequestBody</module>
+    <module>spring-boot-10-@PostMapping-@ModelAttribute-thymeleaf</module>
+    <module>spring-boot-11-JPA-MySQL</module>
+    <module>spring-boot-12-custom-jpa-@Query</module>
+    <module>spring-boot-12-jpa-method-and-@Query-@Param</module>
+    <module>spring-boot-13-spring-boot-thymeleaf-mysql-web</module>
+    <module>spring-boot-14-restful-api-@RestController-@RequestBody-@PathVariable</module>
+    <module>spring-boot-15-@ControllerAdvice-@RestControllerAdvice-@ExceptionHandler-@ResponseStatus</module>
+    <module>spring-boot-16-@ConfigurationProperties</module>
+    <module>spring-boot-17-spring-profiles</module>
+    <module>spring-boot-18-testing-in-spring-boot</module>
+    <module>hibernate-and-hibernate-only</module>
+    <module>spring-boot-@Conditional</module>
+    <module>spring-boot-@EventListener-@Async</module>
+    <module>spring-boot-custom-@Conditional</module>
+    <module>spring-boot-@Conditional-2-custom-conditional</module>
+    <module>spring-boot-application-context-events</module>
+    <module>spring-boot-jpa-auditing</module>
+    <module>jpa-hibernate-pageable</module>
+    <module>jpa-hibernate-specifications</module>
+    <module>jpa-hibernate-criteria</module>
+    <module>spring-boot-swagger2</module>
+    <module>spring-boot-swagger3-openapi3</module>
+    <module>jpa-hibernate-custom-validation</module>
+    <module>test-mockito-basic</module>
+    <module>spring-boot-19-testing-in-spring-boot-2</module>
+  </modules>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!--spring mvc, rest-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!--hot swapping, disable cache for template-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!--lombok annotation for fast coding-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <!--for test-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>28.0-jre</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
